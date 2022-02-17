@@ -18,8 +18,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-      /* --link-color: 21,190,236; */
-      --link-color: 193,190,236;
+      --link-color: 21,190,236;
+      /* --link-color: 193,190,236; */
       --background-color: 0,0,0;
       --text-color: 255,255,255;
   }
