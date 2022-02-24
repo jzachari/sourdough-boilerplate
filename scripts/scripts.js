@@ -261,6 +261,50 @@ export async function loadBlock(block, eager = false) {
 }
 
 /**
+ * Build figure element
+ * @param {Element} blockEl The original element to be placed in figure.
+ * @returns figEl Generated figure
+ */
+export function buildFigure(blockEl) {
+  const figEl = document.createElement('figure');
+  figEl.classList.add('figure');
+  blockEl.childNodes.forEach((child) => {
+    const clone = child.cloneNode(true);
+    // picture, video, or embed link is NOT wrapped in P tag
+    if (clone.nodeName === 'PICTURE' || clone.nodeName === 'VIDEO' || clone.nodeName === 'A') {
+      figEl.prepend(clone);
+    } else {
+      // content wrapped in P tag(s)
+      const picture = clone.querySelector('picture');
+      if (picture) {
+        figEl.prepend(picture);
+      }
+      const video = clone.querySelector('video');
+      if (video) {
+        figEl.prepend(video);
+      }
+      const caption = clone.querySelector('em');
+      if (caption) {
+        const figElCaption = buildCaption(caption);
+        figEl.append(figElCaption);
+      }
+      const link = clone.querySelector('a');
+      if (link) {
+        const img = figEl.querySelector('picture') || figEl.querySelector('video');
+        if (img) {
+          // wrap picture or video in A tag
+          link.textContent = '';
+          link.append(img);
+        }
+        figEl.prepend(link);
+      }
+    }
+  });
+  return figEl;
+}
+
+
+/**
  * Loads JS and CSS for all blocks in a container element.
  * @param {Element} $main The container element
  */
