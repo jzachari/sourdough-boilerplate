@@ -130,6 +130,12 @@ main pre {
   white-space: pre;
 }
 
+main table {
+     border-collapse: separate;
+    text-indent: initial;
+    border-spacing: 10px;
+}
+
 code,
 pre,
 samp {
