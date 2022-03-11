@@ -202,6 +202,18 @@ main img {
   }    
 }
 
+table {
+    border-collapse:collapse;
+    margin: 2rem auto;
+}
+
+table th, table td {
+    border:1px solid rgba(var(--text-color),.9);
+}
+
+table p {
+    margin: 0 0.8rem;
+}
 
 /* above the fold CSS goes here to squash CLS */
 
