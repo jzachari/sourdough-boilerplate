@@ -202,11 +202,6 @@ main img {
   }    
 }
 
-table.test {
-}
-table.test td, table.test th {
-  padding: 3px 10px;
-}
 
 /* above the fold CSS goes here to squash CLS */
 
