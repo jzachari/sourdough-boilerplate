@@ -131,9 +131,10 @@ main pre {
 }
 
 main table {
-     border-collapse: separate;
+    border-collapse: separate;
     text-indent: initial;
-    border-spacing: 20px;
+    border-spacing: 2px;
+    padding: 3px 10px;
 }
 
 code,
