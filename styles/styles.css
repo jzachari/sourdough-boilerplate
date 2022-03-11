@@ -208,7 +208,8 @@ table {
 }
 
 table th, table td {
-    border:1px solid rgba(var(--text-color),.9);
+    /* border:1px solid rgba(var(--text-color),.9); */
+    border:1px;
 }
 
 table p {
