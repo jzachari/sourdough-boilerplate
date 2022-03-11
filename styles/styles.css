@@ -202,7 +202,9 @@ main img {
   }    
 }
 
-main table {
+table.test {
+}
+table.test td, table.test th {
   padding: 3px 10px;
 }
 
