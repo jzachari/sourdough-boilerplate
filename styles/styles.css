@@ -202,6 +202,12 @@ main img {
   }    
 }
 
+table {
+}
+table td, table th {
+  padding: 3px 10px;
+}
+
 /* above the fold CSS goes here to squash CLS */
 
 main .section[data-section-status='loading'], main .section[data-section-status='initialized'] {
