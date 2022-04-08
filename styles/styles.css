@@ -26,9 +26,16 @@
 @media (prefers-color-scheme: dark) {
   :root {
       /*--link-color: 21,190,236; */
-      --link-color: 193,190,236;
-      --background-color: 0,0,0;
-      --text-color: 255,255,255;
+   /*
+      *--link-color: 193,190,236;
+      *--background-color: 0,0,0;
+      *--text-color: 255,255,255; */
+      --link-color: #15beec;
+      --link-hover-color: #05aedc;
+      --background-color: #000;
+      --overlay-background-color: #ffffff20;
+      --highlight-background-color: #ffffff40;
+      --text-color: #fff;
   }
 }
 
