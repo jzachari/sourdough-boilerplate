@@ -17,8 +17,8 @@ main .form-container h3 {
   text-transform: uppercase;
 }
 
-/* main .form-container input,
-main .form-container textarea, */
+main .form-container input,
+main .form-container textarea,
 main .form-container select {
   border: 1px solid rgb(193,193,195);
   padding: 11px;
@@ -27,6 +27,7 @@ main .form-container select {
   max-width: 50rem;
   box-sizing: border-box;
   margin-top: 4px;
+  background-color: rgba(var(--background-color), 0.5);
 }
 
 main .form-container textarea {
