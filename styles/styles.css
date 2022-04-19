@@ -12,8 +12,10 @@
 
  :root {
   --link-color: 3,95,230;
-  --background-color: 255,255,255;
-  --text-color: 0,0,0;
+  /* --background-color: 255,255,255;
+  --text-color: 0,0,0; */
+  --background-color: 0,0,0;
+  --text-color: 255,255,255;
 }
 
 @media (prefers-color-scheme: dark) {
