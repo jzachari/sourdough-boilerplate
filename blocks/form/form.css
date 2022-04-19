@@ -4,7 +4,7 @@ main .form-container {
   box-shadow: 0px 1px 6px rgb(34 34 34 / 10%);
 }
 
-main .form-container h2 {
+/* main .form-container h2 {
   padding: var(--spacing-m) 0px;
   font-size: var(--type-heading-l-lh);
   font-weight: normal;
@@ -15,7 +15,7 @@ main .form-container h3 {
   font-size: var(--type-heading-m-size);
   font-weight: bold;
   text-transform: uppercase;
-}
+} */
 
 main .form-container input,
 main .form-container textarea,
