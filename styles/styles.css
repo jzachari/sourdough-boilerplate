@@ -90,7 +90,7 @@ a:hover {
   text-decoration: underline;
 }
 
-main input, main button {
+main input, select, textarea, main button {
   font-size: 1.25rem;
   width: 100%;
   max-width: 50rem;
