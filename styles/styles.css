@@ -118,7 +118,7 @@ main input, select, textarea {
   background-color: rgba(var(--background-color), 0.5);
 }
 
-main input:hover {
+main input:hover, select:hover, textarea:hover {
   border: 1px solid rgba(var(--text-color),0.9);
 }
 
