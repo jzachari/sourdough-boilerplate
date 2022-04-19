@@ -112,7 +112,7 @@ main button:hover {
   cursor: pointer;
 }
 
-main input {
+main input, select, textarea {
   border: 1px solid rgba(var(--text-color),0.5);
   color: rgb(var(--text-color));
   background-color: rgba(var(--background-color), 0.5);
