@@ -58,7 +58,7 @@ main .form-container label.required::after {
   padding-left: 5px;
 }
 
-main .form-container .field-wrapper {
+/* main .form-container .field-wrapper {
   margin-bottom: 20px;
 }
 
@@ -110,4 +110,4 @@ main .form-container .button {
 main .form-container .form-submit-wrapper {
   display: flex;
   justify-content: flex-end;
-}
+} */
