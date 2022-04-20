@@ -65,7 +65,7 @@ main .form-container label.required::after {
 main .form-container .form-checkbox-wrapper {
   display: flex;
   margin: var(--spacing-s) 0;
-}
+} */
 
 main .form-container .form-checkbox-wrapper input[type='checkbox'] {
   display: none;
@@ -95,7 +95,7 @@ main .form-container .form-checkbox-wrapper label {
   display: block;
 }
 
-main .form-container .button {
+/* main .form-container .button {
   cursor: pointer;
   background: rgb(20, 115, 230);
   color: white;
