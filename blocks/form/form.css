@@ -61,11 +61,12 @@ main .form-container label.required::after {
 /* main .form-container .field-wrapper {
   margin-bottom: 20px;
 }
+*/
 
 main .form-container .form-checkbox-wrapper {
   display: flex;
   margin: var(--spacing-s) 0;
-} */
+} 
 
 main .form-container .form-checkbox-wrapper input[type='checkbox'] {
   display: none;
