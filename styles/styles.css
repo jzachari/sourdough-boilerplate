@@ -225,4 +225,9 @@ table p {
 main .section[data-section-status='loading'], main .section[data-section-status='initialized'] {
     display: none;
   }
+
+.hidden {
+    display: none;
+}
+
   
