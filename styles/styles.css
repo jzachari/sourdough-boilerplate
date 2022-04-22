@@ -220,6 +220,13 @@ table p {
     margin: 0 0.8rem;
 }
 
+textarea {
+    font-family: 'adobe clean', 'helvetica neue', helvetica,
+    ubuntu,
+    roboto, noto,
+    sans-serif;
+}
+
 /* above the fold CSS goes here to squash CLS */
 
 main .section[data-section-status='loading'], main .section[data-section-status='initialized'] {
