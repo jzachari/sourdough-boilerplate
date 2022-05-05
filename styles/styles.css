@@ -201,7 +201,7 @@ main img {
     min-height: calc(100vh - 212px);
   }
   main>.section>div {
-      max-width: 30em;
+      max-width: 300em;
       margin: auto;
   }    
 }
