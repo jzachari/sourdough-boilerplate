@@ -184,7 +184,7 @@ main img {
   height: auto;
 }
 
-/*
+
 @media (min-width: 600px) {
   html {
       font-size: 85%;
@@ -206,7 +206,7 @@ main img {
       margin: auto;
   }    
 }
-*/
+
 
 table {
     border-collapse:collapse;
