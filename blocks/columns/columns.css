@@ -4,7 +4,7 @@
 
 .columns.bleed > div {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     /* padding: 2rem 0; */
     padding: 0;
 }
@@ -120,8 +120,3 @@
     }
 }
 
-@media (min-width: 600px) {
-    .columns.bleed > div {
-        flex-direction: row;
-    }  
-}
