@@ -120,7 +120,7 @@
     }
 }
 
-@media (min-width: 400px) {
+@media (min-width: 600px) {
     .columns.bleed > div {
         flex-direction: row;
     }  
