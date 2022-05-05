@@ -47,8 +47,7 @@
 @media (min-width: 900px) {
     .columns.bleed > div {
         flex-direction: unset;
-        /* margin: auto; */
-        margin: 0;
+        margin: auto;
         align-items: center;
     }    
     .columns.bleed div.columns-image img {
@@ -86,7 +85,8 @@
 }
 
 .columns.contained > div > div {
-    margin-bottom: var(--spacing-l);
+    /* margin-bottom: var(--spacing-l); */
+    margin: 0 auto;
 }
 
 .columns.contained > div > div:last-of-type {
