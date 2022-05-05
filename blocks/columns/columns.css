@@ -86,7 +86,7 @@
 
 .columns.contained > div > div {
     /* margin-bottom: var(--spacing-l); */
-    margin: 0 auto;
+    margin-bottom: 0;
 }
 
 .columns.contained > div > div:last-of-type {
