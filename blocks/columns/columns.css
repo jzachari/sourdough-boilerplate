@@ -10,7 +10,7 @@
 }
 
 .columns.bleed div.columns-content {
-    /* padding: 2rem; */
+    padding: 2rem;
     flex: 1 1 400px;
 }
 
@@ -47,7 +47,8 @@
 @media (min-width: 900px) {
     .columns.bleed > div {
         flex-direction: unset;
-        margin: auto;    
+        /* margin: auto; */
+        margin: 0;
         align-items: center;
     }    
     .columns.bleed div.columns-image img {
