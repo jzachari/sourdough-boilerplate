@@ -3,4 +3,5 @@
 main .example {
   background-color: rgba(var(--link-color), 0.6);
   padding: 1em;
+  text-align: center;
 }
