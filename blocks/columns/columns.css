@@ -10,8 +10,7 @@
 }
 
 .columns.bleed div.columns-content {
-    /* padding: 2rem; */
-    padding: 0;
+    padding: 2rem;
     flex: 1 1 400px;
 }
 
