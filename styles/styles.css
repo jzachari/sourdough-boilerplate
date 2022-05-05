@@ -93,7 +93,7 @@ a:hover {
 main input, select, textarea, main button {
   font-size: 1.25rem;
   width: 100%;
-  max-width: 50rem;
+  max-width: 100rem;
   display: block;
   margin-bottom: 1rem;
   padding: 0.75rem 0.6rem;    
