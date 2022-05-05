@@ -237,4 +237,9 @@ main .section[data-section-status='loading'], main .section[data-section-status=
     display: none;
 }
 
+form { 
+margin: 0 auto; 
+width:250px;
+}
+
   
