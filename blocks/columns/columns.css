@@ -119,3 +119,9 @@
         grid-gap: var(--spacing-xxl);
     }
 }
+
+@media (min-width: 200px) {
+    .columns.bleed > div {
+        flex-direction: row;
+    }  
+}
