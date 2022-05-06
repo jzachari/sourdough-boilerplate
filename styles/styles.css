@@ -185,6 +185,11 @@ main img {
   height: auto;
 }
 
+main div.p.picture {
+    overflow: hidden;
+    font-size: 0;
+} 
+
 
 @media (min-width: 600px) {
   html {
