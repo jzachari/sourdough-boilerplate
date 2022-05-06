@@ -121,3 +121,13 @@
     }
 }
 
+/* hide all text initially */
+.columns-wrapper p {
+   opacity: 0;
+}
+/* fade text in */
+.columns p {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
