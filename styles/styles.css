@@ -185,7 +185,7 @@ main img {
   height: auto;
 }
 
-main div.p.picture {
+picture {
     overflow: hidden;
     font-size: 0;
 } 
