@@ -183,13 +183,9 @@ hr {
 main img {
   max-width: 100%;
   height: auto;
+  overflow: hidden;
+  font-size: 0;
 }
-
-picture {
-    overflow: hidden;
-    font-size: 0;
-} 
-
 
 @media (min-width: 600px) {
   html {
