@@ -183,6 +183,9 @@ hr {
 main img {
   max-width: 100%;
   height: auto;
+}
+
+.img-container {
   overflow: hidden;
   font-size: 0;
 }
