@@ -82,6 +82,10 @@ p, dl, ol, ul, pre, blockquote {
   margin-bottom: 0;
 }
 
+p {
+  font-size: 0;
+}
+
 
 a:any-link {
   color: rgb(var(--link-color));
