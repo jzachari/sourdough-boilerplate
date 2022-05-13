@@ -54,7 +54,7 @@
     .columns.bleed div.columns-image img {
         object-fit: cover;
         height: 50vw;
-        max-height: 600px;
+        max-height: 700px;
         width: 100%;
         object-position: left;
     }
