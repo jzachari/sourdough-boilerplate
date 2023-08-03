@@ -14,6 +14,12 @@ function createSelect(fd) {
     option.value = o.trim();
     select.append(option);
   });
+  if (fd.Options === '$URL') {
+    // set the current URL to the variable currentUrl
+    const currentUrl = window.location.href;
+    // set fd.Options to the currentUrl value
+    fd.Options = currentUrl;
+  }
   if (fd.Mandatory === 'x') {
     select.setAttribute('required', 'required');
   }
