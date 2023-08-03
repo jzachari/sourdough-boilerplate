@@ -13,6 +13,10 @@ function createSelect(fd) {
     const currentUrl = window.location.href;
     // set fd.Options to the currentUrl value
     fd.Options = currentUrl;
+    // write the currentUrl value to the console
+    console.log(currentUrl);
+    // write the fd.Options value to the console
+    console.log(fd.Options);
   }
   fd.Options.split(',').forEach((o) => {
     const option = document.createElement('option');
