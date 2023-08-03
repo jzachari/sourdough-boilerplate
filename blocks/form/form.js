@@ -8,7 +8,7 @@ function createSelect(fd) {
     ph.setAttribute('disabled', '');
     select.append(ph);
   }
-  if (fd.Options === '$URL') {
+  if (fd.Options === 'url') {
     // set the current URL to the variable currentUrl
     const currentUrl = window.location.href;
     // set fd.Options to the currentUrl value
