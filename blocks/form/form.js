@@ -17,7 +17,7 @@ function createSelect(fd) {
   if (fd.Options === 'url') {
     // set the current URL to the variable currentUrl
     const currentUrl = window.location.href;
-    select.append(currentUrl)
+    select.append(currentUrl);
   }
   if (fd.Mandatory === 'x') {
     select.setAttribute('required', 'required');
