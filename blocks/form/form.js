@@ -63,10 +63,7 @@ function createButton(fd) {
         button.setAttribute('disabled', '');
         await submitForm(form);
         const redirectTo = fd.Extra;
-        // if redirectTo is not blank
-        if (redirectTo !== '') {
         window.location.href = redirectTo;
-        }
       }
     });
   }
