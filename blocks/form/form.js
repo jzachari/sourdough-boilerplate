@@ -65,7 +65,12 @@ function createButton(fd) {
         const redirectTo = fd.Extra;
         // If redirectTo is not blank
         if (redirectTo) {
-          window.location.href = redirectTo;
+          // If redirectTo is a valid URL
+          if (redirectTo.match(/^(http|https):\/\//)) {
+            window.location.href = redirectTo;
+          } else {
+            button.textContent = fd.Extra;
+          }
         }
       }
     });
