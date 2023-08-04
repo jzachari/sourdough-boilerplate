@@ -8,22 +8,17 @@ function createSelect(fd) {
     ph.setAttribute('disabled', '');
     select.append(ph);
   }
-  if (fd.Options === 'url') {
-    // set the current URL to the variable currentUrl
-    const currentUrl = window.location.href;
-    // set fd.Options to the currentUrl value
-    fd.Options = currentUrl;
-    // write the currentUrl value to the console
-    console.log(currentUrl);
-    // write the fd.Options value to the console
-    console.log(fd.Options);
-  }
   fd.Options.split(',').forEach((o) => {
     const option = document.createElement('option');
     option.textContent = o.trim();
     option.value = o.trim();
     select.append(option);
   });
+  if (fd.Options === 'url') {
+    // set the current URL to the variable currentUrl
+    const currentUrl = window.location.href;
+    select.append(currentUrl)
+  }
   if (fd.Mandatory === 'x') {
     select.setAttribute('required', 'required');
   }
