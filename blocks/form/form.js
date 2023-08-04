@@ -63,7 +63,12 @@ function createButton(fd) {
         button.setAttribute('disabled', '');
         await submitForm(form);
         const redirectTo = fd.Extra;
-        window.location.href = redirectTo;
+        // If redirectTo is not blank
+        if (redirectTo) {
+          // write "reloading page" to the console
+          console.log('Reloading page');
+          window.location.href = redirectTo;
+        }
       }
     });
   }
