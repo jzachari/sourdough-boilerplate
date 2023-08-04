@@ -69,7 +69,7 @@ function createButton(fd) {
           if (redirectTo.match(/^(http|https):\/\//)) {
             window.location.href = redirectTo;
           } else {
-            button.textContent = fd.Extra;
+            button.textContent = redirectTo;
           }
         }
       }
