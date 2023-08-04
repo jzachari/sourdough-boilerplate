@@ -10,15 +10,16 @@ function createSelect(fd) {
   }
   fd.Options.split(',').forEach((o) => {
     const option = document.createElement('option');
-    option.textContent = o.trim();
-    option.value = o.trim();
-    select.append(option);
-  });
-  if (fd.Options === 'url') {
-    // set the current URL to the variable currentUrl
     const currentUrl = window.location.href;
-    select.append(currentUrl);
-  }
+    if (fd.Options === 'url') {
+      option.textContent = currentUrl;
+      option.value = currentUrl;
+    } else {
+      option.textContent = o.trim();
+      option.value = o.trim();
+      select.append(option);
+    }
+  });
   if (fd.Mandatory === 'x') {
     select.setAttribute('required', 'required');
   }
