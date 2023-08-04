@@ -14,6 +14,7 @@ function createSelect(fd) {
     if (fd.Options === 'url') {
       option.textContent = currentUrl;
       option.value = currentUrl;
+      select.append(currentUrl);
     } else {
       option.textContent = o.trim();
       option.value = o.trim();
