@@ -11,13 +11,11 @@ function createSelect(fd) {
   fd.Options.split(',').forEach((o) => {
     const option = document.createElement('option');
     const currentUrl = window.location.href;
+    option.textContent = o.trim();
+    option.value = o.trim();
     if (fd.Options === 'url') {
-      option.textContent = currentUrl;
-      option.value = currentUrl;
       select.append(currentUrl);
     } else {
-      option.textContent = o.trim();
-      option.value = o.trim();
       select.append(option);
     }
   });
