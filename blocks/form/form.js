@@ -12,12 +12,12 @@ function createSelect(fd) {
     const option = document.createElement('option');
     const currentUrl = window.location.href;
     option.textContent = o.trim();
-    option.value = o.trim();
-    if (fd.Options === 'url') {
-      select.append(currentUrl);
-    } else {
-      select.append(option);
+    if (o.trim() === 'url') {
+      option.value = currentUrl.trim();
+    } else { 
+      option.value = o.trim(); 
     }
+      select.append(option);
   });
   if (fd.Mandatory === 'x') {
     select.setAttribute('required', 'required');
