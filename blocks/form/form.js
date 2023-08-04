@@ -65,8 +65,6 @@ function createButton(fd) {
         const redirectTo = fd.Extra;
         // If redirectTo is not blank
         if (redirectTo) {
-          // write "reloading page" to the console
-          console.log('Reloading page');
           window.location.href = redirectTo;
         }
       }
