@@ -14,10 +14,10 @@ function createSelect(fd) {
     option.textContent = o.trim();
     if (o.trim() === 'url') {
       option.value = currentUrl.trim();
-    } else { 
-      option.value = o.trim(); 
+    } else {
+      option.value = o.trim();
     }
-      select.append(option);
+    select.append(option);
   });
   if (fd.Mandatory === 'x') {
     select.setAttribute('required', 'required');
@@ -134,7 +134,7 @@ function applyRules(form, rules) {
   });
 }
 
-async function createForm(formURL,lovesURL) {
+async function createForm(formURL, lovesURL) {
   const { pathname } = new URL(formURL);
   // Write the pathname to the console
   console.log(pathname);
@@ -165,18 +165,20 @@ async function createForm(formURL,lovesURL) {
   const siteurl = window.location.href;
   // Write siteurl to the console
   console.log(siteurl);
-  // set the variable loveline by parsing the json lovejson for the key "site" with a value of siteurl
+  // set the variable loveline by parsing the json lovejson
+  // for the key "site" with a value of siteurl
   const loveline = lovesjson.data.find((love) => love.site === siteurl);
   // Write loveline to the console
   console.log(loveline);
-  // set the variable loves to the value of the key "loves" in the loveline variable
-  const loves = loveline.loves;
+  // set the variable lovesCount to the value of the key "loves" in the loveline variable
+  // const loves = loveline.loves;
+  const { loves: lovesCount } = loveline;
   // Write loves to the console
-  console.log(loves);
+  console.log(lovesCount);
   // create a text div with the id "loves" and the text content of the loves variable
   const lovesdiv = document.createElement('div');
   lovesdiv.id = 'loves';
-  lovesdiv.textContent = loves;
+  lovesdiv.textContent = lovesCount;
   json.data.forEach((fd) => {
     fd.Type = fd.Type || 'text';
     const fieldWrapper = document.createElement('div');
@@ -233,7 +235,7 @@ export default async function decorate(block) {
   // write loves to the console
   console.log(loves.href);
   if (form && loves) {
-    form.replaceWith(await createForm(form.href,loves.href));
+    form.replaceWith(await createForm(form.href, loves.href));
     loves.remove();
   }
 }
