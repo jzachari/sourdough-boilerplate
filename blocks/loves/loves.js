@@ -62,6 +62,9 @@ function createButton(fd) {
         event.preventDefault();
         button.setAttribute('disabled', '');
         await submitForm(form);
+        // update the div lovesdiv to have the text of loves plus 1
+        const lovesdiv = document.getElementById('loves');
+        lovesdiv.textContent = parseInt(lovesdiv.textContent, 10) + 1;
         const redirectTo = fd.Extra;
         // If redirectTo is not blank
         if (redirectTo) {
@@ -131,14 +134,49 @@ function applyRules(form, rules) {
   });
 }
 
-async function createForm(formURL) {
+async function createForm(formURL,lovesURL) {
   const { pathname } = new URL(formURL);
+  // Write the pathname to the console
+  console.log(pathname);
   const resp = await fetch(pathname);
+  // Write resp to the console
+  console.log(resp);
   const json = await resp.json();
+  // Write json to the console
+  console.log(json);
   const form = document.createElement('form');
   const rules = [];
   // eslint-disable-next-line prefer-destructuring
   form.dataset.action = pathname.split('.json')[0];
+  // Write form.dataset.action to the console
+  console.log(form.dataset.action);
+  const lovespathname = new URL(lovesURL);
+  // Write the lovespathname to the console
+  console.log(lovespathname.pathname);
+  // console.log(lovesURL);
+  const lovesresp = await fetch(lovespathname.pathname);
+  // Write lovesresp to the console
+  console.log(lovesresp);
+  // Get the json from the lovesresp
+  const lovesjson = await lovesresp.json();
+  // Write lovesjson to the console
+  console.log(lovesjson);
+  // set the variable siteurl to the current URL
+  const siteurl = window.location.href;
+  // Write siteurl to the console
+  console.log(siteurl);
+  // set the variable loveline by parsing the json lovejson for the key "site" with a value of siteurl
+  const loveline = lovesjson.data.find((love) => love.site === siteurl);
+  // Write loveline to the console
+  console.log(loveline);
+  // set the variable loves to the value of the key "loves" in the loveline variable
+  const loves = loveline.loves;
+  // Write loves to the console
+  console.log(loves);
+  // create a text div with the id "loves" and the text content of the loves variable
+  const lovesdiv = document.createElement('div');
+  lovesdiv.id = 'loves';
+  lovesdiv.textContent = loves;
   json.data.forEach((fd) => {
     fd.Type = fd.Type || 'text';
     const fieldWrapper = document.createElement('div');
@@ -163,6 +201,7 @@ async function createForm(formURL) {
         fieldWrapper.append(createTextArea(fd));
         break;
       case 'submit':
+        fieldWrapper.append(lovesdiv);
         fieldWrapper.append(createButton(fd));
         break;
       default:
@@ -188,7 +227,12 @@ async function createForm(formURL) {
 
 export default async function decorate(block) {
   const form = block.querySelector('a[href$=".json"]');
+  // Write form to the console
+  console.log(form.href);
+  const loves = block.querySelectorAll('a[href$=".json"]')[1];
+  // write loves to the console
+  console.log(loves.href);
   if (form) {
-    form.replaceWith(await createForm(form.href));
+    form.replaceWith(await createForm(form.href,loves.href));
   }
 }
