@@ -1,0 +1,19 @@
+name: preview and publish loves once an hour
+
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron:  '0 * * * *'
+
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Loves Preview
+      run: curl --request POST \
+      https://admin.hlx.page/preview/jzachari/sourdough-boilerplate/main/love.json
+    - name: Loves Publish
+    run: curl --request POST \
+      https://admin.hlx.page/live/jzachari/sourdough-boilerplate/main/love.json
+      
