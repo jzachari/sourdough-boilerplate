@@ -232,7 +232,8 @@ export default async function decorate(block) {
   const loves = block.querySelectorAll('a[href$=".json"]')[1];
   // write loves to the console
   console.log(loves.href);
-  if (form) {
+  if (form && loves) {
     form.replaceWith(await createForm(form.href,loves.href));
+    loves.remove();
   }
 }
